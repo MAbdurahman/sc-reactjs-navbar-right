@@ -6,6 +6,7 @@ import About from '../pages/About/index.jsx';
 import Services from '../pages/Services/index.jsx';
 import Contact from '../pages/Contact/index.jsx';
 import SignIn from '../auth/SignIn/index.jsx';
+import Navbar from '../components/Navbar/index.jsx';
 
 
 
@@ -14,6 +15,7 @@ export default function App() {
 
    return (
       <Fragment>
+         <Navbar />
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -1,4 +1,4 @@
-.services__page {
+.products__page {
    display: flex;
    height: 100vh;
    flex-direction: column;
@@ -6,7 +6,7 @@
    justify-content: center;
 }
 
-.services__page__title {
+.products__page__title {
    font-weight: var(--font-weight-semibold);
    font-size: 6rem;
    color: var(--color-neutral-900);
