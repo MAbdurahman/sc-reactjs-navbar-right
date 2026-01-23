@@ -1,18 +1,15 @@
-# sc-reactjs-products-list
+# sc-reactjs-navbar-right
 
-<p>This is a simple React application that displays a list of products in an e-commerce
-context. It allows users review product details and add them to a shopping cart,
-increasing the quantity of each product, decreasing the quantity of each product,
-removing the product from the cart, and clearing the cart. It also displays the total
-price of the products in the cart.</p>
+<p>This repository is a simple React navbar made with Style Components, react-router-dom,
+and react-helmet. The navbar is styled with styled-components, usesreact-router-dom for 
+routing between pages, and react-helmet managing for meta-data.</p>
 
 ## Features
-
 - Responsive design
-- Style components
-- React router dom
-- React helmet
-- React hooks
+- Styled with styled-components
+- Routing with react-router-dom
+- Manages meta-data with react-helmet
+
 
 ### To install dependencies
 ```shell
@@ -40,3 +37,4 @@ or
 
 ```shell
 yarn build
+```
