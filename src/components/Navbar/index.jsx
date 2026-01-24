@@ -11,7 +11,6 @@ import {navLinks, mobileNavLinks} from '../../assets/data/links.js';
 
 export default function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
    const navHeaderListRef = useRef(null);
    const navHamburgerRefOne = useRef(null);
@@ -37,7 +36,7 @@ export default function Navbar() {
                <StyledHeaderNavbarList ref={navHeaderListRef} className={isMenuOpen ? 'menu--open' : 'menu--close'}>
                   {
                      navLinks.map((link) => (
-                        <StyledHeaderNavbarLink key={link.id} to={link.path} activeclassname="active">{link.name}</StyledHeaderNavbarLink>
+                        <StyledHeaderNavbarLink key={link.id} to={link.path} onClick={handleHamburgerOpen} activeclassname="active">{link.name}</StyledHeaderNavbarLink>
                      ))
                   }
                </StyledHeaderNavbarList>
