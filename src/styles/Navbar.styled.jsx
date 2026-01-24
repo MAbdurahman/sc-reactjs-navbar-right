@@ -1,7 +1,5 @@
-
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
-
 
 
 export const StyleHeader = styled.header`
@@ -11,7 +9,7 @@ export const StyleHeader = styled.header`
    min-height: 60px;
    width: 100%;
    background-color: var(--color-augmented-800);
-   
+
 `;
 
 export const StyleHeaderNavbarContainer = styled.div`
@@ -23,7 +21,11 @@ export const StyleHeaderNavbarContainer = styled.div`
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   
+
+   @media only screen and (max-width: 1100px) {
+      width: 90vw;
+   }
+
 `
 
 export const StyleHeaderNavbarContainerLeft = styled.div`
@@ -31,7 +33,7 @@ export const StyleHeaderNavbarContainerLeft = styled.div`
    flex-direction: row;
    align-items: center;
    justify-content: center;
-   
+
 `;
 
 
@@ -56,61 +58,78 @@ export const StyledHeaderNavbarList = styled.ul`
    flex-direction: row;
    -moz-column-gap: 40px;
    column-gap: 40px;
+
+   @media only screen and (max-width: 800px) {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      row-gap: 2em;
+      padding-top: 80px;
+      z-index: 1;
+      background-color: var(--color-augmented-800);
+   }
 `;
 
 export const StyledHeaderNavbarLink = styled(NavLink)`
    text-decoration: none;
-   font-family: 'Mulish', sans-serif;;
-   font-size: 1rem;
-   font-weight: 700;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   color: var(--color-augmented-100);
-   
+   font-weight: 800;
+   color: hsl(210, 0%, 98%);
+   /*margin-left: 0.25em;*/
+   transition: all 0.5s cubic-bezier(0.1, 0.7, 0.6, 0.9);
+
    &:last-child {
       background: hsl(196, 77%, 55%);
-      padding: 0.75em 1em;
+      padding: 0.25em 1em;
       border-radius: 24px;
+
       &:hover {
-         color: var(--color-augmented-100)
+         color: hsl(210, 0%, 98%)
       }
+
       &.${(props) => props.activeclassname} {
-         color: var(--color-augmented-100)
+         color: hsl(210, 0%, 98%);
       }
    }
+
    &.${(props) => props.activeclassname} {
       color: hsl(196, 77%, 55%);
    }
 
-   &:hover,
-   &:active,
-   &:focus,
-   &.active {
+   &:hover {
       color: hsl(196, 77%, 55%);
-      display: inline-block;
-      padding-bottom: 0.25rem;
-      /* defines the space between text and underline */
-      position: relative;
    }
-   &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-bright-blue-01-700);
-      transition: width 0.25s ease-out;
-   }
-
-   &.active::before,
-   &:hover::before {
-      width: 100%;
-      left: 0;
-      right: auto;
-   }
-   
-   
-   
-   
 `;
+
+export const StyledNavbarHamburger = styled.div`
+   display: none;
+   cursor: pointer;
+
+   @media only screen and (max-width: 800px) {
+      display: block;
+   }
+`;
+
+export const StyledNavbarHamburgerBar = styled.div`
+   height: 2px;
+   width: 27px;
+   margin: 5px 0;
+   background-color: rgba(255, 255, 255, 0.8);
+   transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
+   
+   .hamburger--open &:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+   }
+   .hamburger--open &:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+   }
+   .hamburger--open &:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+   }
+   
+   
+   `;

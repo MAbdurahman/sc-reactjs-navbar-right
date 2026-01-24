@@ -195,16 +195,16 @@ export const GlobalStyles = createGlobalStyle`
       border-bottom: 3px solid hsl(196, 77%, 55%);
    }
 
-   .hamburger--open .hamburger__bar:nth-child(1) {
+   .hamburger--open:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
    }
 
-   .hamburger--open .hamburger__bar:nth-child(2) {
+   .hamburger--open:nth-child(2) {
       transform: translateX(100%);
       opacity: 0;
    }
 
-   .hamburger--open .hamburger__bar:nth-child(3) {
+   .hamburger--open:nth-child(3) {
       transform: translateY(-7px) rotate(-45deg);
    }
    
