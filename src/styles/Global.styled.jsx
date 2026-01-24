@@ -194,12 +194,18 @@ export const GlobalStyles = createGlobalStyle`
        background-color: hsl(210, 0%, 18%);
       border-bottom: 3px solid hsl(196, 77%, 55%);
    }
-   
-   .side__panel--open {
-      transform: translateX(0);
+
+   .hamburger--open .hamburger__bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
    }
-   .side__panel--close {
+
+   .hamburger--open .hamburger__bar:nth-child(2) {
       transform: translateX(100%);
+      opacity: 0;
+   }
+
+   .hamburger--open .hamburger__bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
    }
    
 `;

@@ -11,6 +11,7 @@ export default function Navbar() {
 
    return (
       <StyleHeader>
+         <div className='utils-container'>
          <StyleHeaderNavbarContainer>
             <StyleHeaderNavbarContainerLeft>
                <StyleHeaderNavbarLogo to="/">LogoBrand</StyleHeaderNavbarLogo>
@@ -26,6 +27,7 @@ export default function Navbar() {
             </StyledHeaderNavbarContainerRight>
 
          </StyleHeaderNavbarContainer>
+         </div>
       </StyleHeader>
 
    );

@@ -12,7 +12,7 @@ export default function EmptyCart() {
             <div className={styles.empty__cart__container}>
                <img className={styles.empty__cart__image} src={EmptyCartImage} alt='Empty Cart Face'/>
                <p className={styles.empty__cart__paragraph}>Empty Cart</p>
-               <Link to='/products' className={styles.empty__cart__button}>
+               <Link to='/services' className={styles.empty__cart__button}>
                   Continue Shopping
                </Link>
             </div>

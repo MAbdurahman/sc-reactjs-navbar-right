@@ -14,8 +14,8 @@ export default function NoResults() {
             <div className={styles.no__results__container}>
                <img className={styles.no__results__image} src={NoResultsImage} alt='No Results Face'/>
                <p className={styles.no__results__paragraph}>No Results</p>
-               <Link to='/products' className={styles.no__results__button}>
-                  Back To Products
+               <Link to='/services' className={styles.no__results__button}>
+                  Back To Services
                </Link>
             </div>
          </div>
