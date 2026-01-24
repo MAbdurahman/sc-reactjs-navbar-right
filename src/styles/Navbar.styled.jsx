@@ -61,7 +61,7 @@ export const StyledHeaderNavbarList = styled.ul`
 
    @media only screen and (max-width: 800px) {
       position: fixed;
-      top: 80px;
+      top: 64px;
       left: 0;
       width: 100%;
       height: 100vh;
@@ -73,7 +73,6 @@ export const StyledHeaderNavbarList = styled.ul`
       z-index: 1;
       background-color: var(--color-augmented-800);
       transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
-      
       opacity: 1;
       
       .menu--open & {
