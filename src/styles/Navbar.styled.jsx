@@ -13,7 +13,30 @@ export const StyleHeader = styled.header`
 `;
 
 export const StyleHeaderNavbarContainer = styled.div`
-   width: 80vw;
+  width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-right: 16px;
+   padding-left: 16px;
+   
+   @media screen and (min-width: 576px) {
+      max-width: 544px;
+   }
+   @media screen and (min-width: 768px) {
+      max-width: 720px;
+   }
+   @media screen and (min-width: 992px) {
+      max-width: 960px;
+   }
+   @media screen and (min-width: 1200px) {
+      max-width: 1144px;
+   }
+   @media screen and (min-width: 1400px) {
+      max-width: 1320px;
+   }
+  
+  
+   /*width: 80vw;
    margin-left: auto;
    margin-right: auto;
    padding: 1em 2em;
@@ -24,15 +47,25 @@ export const StyleHeaderNavbarContainer = styled.div`
 
    @media only screen and (max-width: 1100px) {
       width: 90vw;
-   }
+   }*/
 
-`
+`;
+
+export const StyleHeaderNavbarInnerContainer = styled.div`
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+
+`;
 
 export const StyleHeaderNavbarContainerLeft = styled.div`
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: center;
+   
 
 `;
 
@@ -49,7 +82,10 @@ export const StyleHeaderNavbarLogo = styled(NavLink)`
 export const StyledHeaderNavbarContainerRight = styled.nav`
    display: flex;
    align-items: center;
-   transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
+   justify-content: center;
+   /*transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);*/
+   /*justify-content: center;
+   width: 33.33%*/;
 
 `;
 
@@ -58,13 +94,25 @@ export const StyledHeaderNavbarList = styled.ul`
    flex-direction: row;
    -moz-column-gap: 40px;
    column-gap: 40px;
+   transform: translateX(0);
+   
+   
+   @media only screen and (max-width: 800px) {
+      display: none;
+   }
+   
+`;
 
+export const StyleHeaderMobileNavbarList = styled.ul`
+   display: none;
+   
    @media only screen and (max-width: 800px) {
       position: fixed;
       top: 64px;
       left: 0;
       width: 100%;
       height: 100vh;
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
@@ -74,16 +122,18 @@ export const StyledHeaderNavbarList = styled.ul`
       background-color: var(--color-augmented-800);
       transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
       opacity: 1;
-      
+
       .menu--open & {
          transform: translateX(0);
-         
+
       }
       .menu--close & {
          transform: translateX(100%);
       }
-      
+
    }
+   
+
 `;
 
 export const StyledHeaderNavbarLink = styled(NavLink)`

@@ -10,6 +10,8 @@ import Navbar from '../components/Navbar/index.jsx';
 import NotFound from '../errors/NotFound/index.jsx';
 import EmptyCart from '../errors/EmptyCart/index.jsx';
 import NoResults from '../errors/NoResults/index.jsx';
+import GlobalStyle from '../styles/Global.styled.jsx';
+
 
 
 
@@ -30,6 +32,7 @@ export default function App() {
             <Route path="/no-results" element={<NoResults />} />
             <Route path="*" element={<NotFound />} />
          </Routes>
+         <GlobalStyle />
       </Fragment>
 
    );
