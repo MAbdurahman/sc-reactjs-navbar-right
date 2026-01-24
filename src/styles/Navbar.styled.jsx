@@ -72,6 +72,18 @@ export const StyledHeaderNavbarList = styled.ul`
       padding-top: 80px;
       z-index: 1;
       background-color: var(--color-augmented-800);
+      transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
+      
+      opacity: 1;
+      
+      .menu--open & {
+         transform: translateX(0);
+         
+      }
+      .menu--close & {
+         transform: translateX(100%);
+      }
+      
    }
 `;
 
@@ -120,16 +132,18 @@ export const StyledNavbarHamburgerBar = styled.div`
    margin: 5px 0;
    background-color: rgba(255, 255, 255, 0.8);
    transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
-   
+
    .hamburger--open &:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
    }
+
    .hamburger--open &:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
    }
+
    .hamburger--open &:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
    }
    
-   
-   `;
+
+`;

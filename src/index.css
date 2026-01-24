@@ -354,3 +354,10 @@ a:hover {
 .hamburger--open:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+.menu--open {
+  transform: translateX(0);
+}
+.menu--close {
+  transform: translateX(100%);
+}

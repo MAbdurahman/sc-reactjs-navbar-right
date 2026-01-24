@@ -208,5 +208,12 @@ export const GlobalStyles = createGlobalStyle`
       transform: translateY(-7px) rotate(-45deg);
    }
    
+   
+   .menu--open {
+      transform: translateX(0);
+   }
+   .menu--close {
+      transform: translateX(100%);
+   }
 `;
 export default GlobalStyles;

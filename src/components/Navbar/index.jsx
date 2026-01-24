@@ -19,10 +19,11 @@ export default function Navbar() {
    const navHamburgerRefThree = useRef(null);
 
    const handleHamburgerOpen = () => {
-      setHamburgerOpen(!hamburgerOpen);
+      setIsMenuOpen(!isMenuOpen);
       navHamburgerRefOne.current.classList.toggle('hamburger--open');
       navHamburgerRefTwo.current.classList.toggle('hamburger--open');
       navHamburgerRefThree.current.classList.toggle('hamburger--open');
+      navHeaderListRef.current.classList.toggle('menu--open');
 
    }
 
@@ -33,7 +34,7 @@ export default function Navbar() {
                <StyleHeaderNavbarLogo to="/">LogoBrand</StyleHeaderNavbarLogo>
             </StyleHeaderNavbarContainerLeft>
             <StyledHeaderNavbarContainerRight>
-               <StyledHeaderNavbarList>
+               <StyledHeaderNavbarList ref={navHeaderListRef} className={isMenuOpen ? 'menu--open' : 'menu--close'}>
                   {
                      navLinks.map((link) => (
                         <StyledHeaderNavbarLink key={link.id} to={link.path} activeclassname="active">{link.name}</StyledHeaderNavbarLink>
