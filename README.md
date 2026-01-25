@@ -2,7 +2,8 @@
 
 <p>This repository is a simple React navbar made with Style Components, react-router-dom,
 and react-helmet. The navbar is styled with styled-components, usesreact-router-dom for 
-routing between pages, and react-helmet managing for meta-data.</p>
+routing between pages, and react-helmet managing for meta-data. When mobile navbar list
+enters, it comes from the right.</p>
 
 ## Features
 - Responsive design
