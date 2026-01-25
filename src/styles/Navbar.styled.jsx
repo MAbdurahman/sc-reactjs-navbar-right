@@ -58,11 +58,22 @@ export const StyleHeaderNavbarContainerLeft = styled.div`
 
 
 export const StyleHeaderNavbarLogo = styled(NavLink)`
+   
    font-family: 'Mulish', sans-serif;
    font-size: 1.5rem;
    font-weight: 800;
    letter-spacing: -0.5px;
    color: var(--color-augmented-100);
+   
+   
+   @media only screen and (max-width: 550px) {
+      font-size: clamp(1.5rem, 1.75rem + 0.2vw, 2rem);
+      padding-top: 0.5em;
+   }
+   
+   @media only screen and (max-width: 430px) {
+      font-size: clamp(2rem, 2.25rem + 0.2vw, 2.5rem);
+   }
 
 `;
 
@@ -104,6 +115,7 @@ export const StyleHeaderMobileNavbarList = styled.ul`
       row-gap: 2em;
       padding-top: 80px;
       z-index: 1;
+      font-size: 1.5rem;
       background-color: var(--color-augmented-800);
       transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);
       opacity: 1;
@@ -116,6 +128,10 @@ export const StyleHeaderMobileNavbarList = styled.ul`
          transform: translateX(100%);
       }
 
+   }
+   
+   @media screen and (max-width: 420px) {
+      font-size: 2rem;
    }
    
 `;
@@ -158,6 +174,7 @@ export const StyledNavbarHamburger = styled.div`
 
    @media only screen and (max-width: 800px) {
       display: block;
+      padding-top: 1em;
    }
 `;
 
