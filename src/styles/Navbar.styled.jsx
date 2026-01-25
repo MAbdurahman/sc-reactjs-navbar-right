@@ -6,19 +6,19 @@ export const StyleHeader = styled.header`
    position: fixed;
    top: 0;
    left: 0;
-   min-height: 60px;
+   min-height: 64px;
    width: 100%;
    background-color: var(--color-augmented-800);
 
 `;
 
 export const StyleHeaderNavbarContainer = styled.div`
-  width: 100%;
+   width: 100%;
    margin-left: auto;
    margin-right: auto;
    padding-right: 16px;
    padding-left: 16px;
-   
+
    @media screen and (min-width: 576px) {
       max-width: 544px;
    }
@@ -34,20 +34,6 @@ export const StyleHeaderNavbarContainer = styled.div`
    @media screen and (min-width: 1400px) {
       max-width: 1320px;
    }
-  
-  
-   /*width: 80vw;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 1em 2em;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-
-   @media only screen and (max-width: 1100px) {
-      width: 90vw;
-   }*/
 
 `;
 
@@ -57,6 +43,7 @@ export const StyleHeaderNavbarInnerContainer = styled.div`
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
+   padding-top: 0.5em;
 
 `;
 
@@ -83,10 +70,8 @@ export const StyledHeaderNavbarContainerRight = styled.nav`
    display: flex;
    align-items: center;
    justify-content: center;
-   /*transition: transform 0.33s cubic-bezier(.17, .67, .83, .67);*/
-   /*justify-content: center;
-   width: 33.33%*/;
-
+   padding-top: 0.5em;
+   
 `;
 
 export const StyledHeaderNavbarList = styled.ul`
@@ -133,7 +118,6 @@ export const StyleHeaderMobileNavbarList = styled.ul`
 
    }
    
-
 `;
 
 export const StyledHeaderNavbarLink = styled(NavLink)`
@@ -145,7 +129,9 @@ export const StyledHeaderNavbarLink = styled(NavLink)`
 
    &:last-child {
       background: hsl(196, 77%, 55%);
-      padding: 0.25em 1em;
+      padding: 0.5em 1em;
+      margin-bottom: 0.75em;
+      margin-top: -0.5em;
       border-radius: 24px;
 
       &:hover {

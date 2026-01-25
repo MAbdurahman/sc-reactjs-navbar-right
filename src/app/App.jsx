@@ -20,6 +20,7 @@ export default function App() {
 
    return (
       <Fragment>
+         <GlobalStyle />
          <Navbar />
          <Routes>
             <Route path="/" element={<Home />} />
@@ -32,7 +33,6 @@ export default function App() {
             <Route path="/no-results" element={<NoResults />} />
             <Route path="*" element={<NotFound />} />
          </Routes>
-         <GlobalStyle />
       </Fragment>
 
    );
