@@ -40,4 +40,4 @@ or
 yarn build
 ```
 
-![Image](https://github.com/user-attachments/assets/50af1670-e697-4942-823b-e5f2b470ce35)
+![Image](https://github.com/user-attachments/assets/179a37d6-1daa-4a66-99c4-2bf94e4fe2f0)
